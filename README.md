@@ -16,9 +16,9 @@ aoc2021 $ . venv/bin/activate
 
 eg.
 ```
-(venv) aoc2021 $ python aoc2021/day03/solution.py 
-153
-2421944712
+(venv) aoc2021 $ python aoc2021/day03/solution.py
+1082324
+1353024
 ```
 
 ## Test Suite

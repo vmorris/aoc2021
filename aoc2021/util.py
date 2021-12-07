@@ -11,7 +11,7 @@ def get_input(f, type="str"):
         for line in input:
             result.append([int(i) for i in line])
         return result
-        
+
 
 def get_input_nlnl_records(f):
     """ Return list of lists, split on newlines """
@@ -19,6 +19,18 @@ def get_input_nlnl_records(f):
     groups = data.rstrip().split("\n\n")
     return [line.rstrip().split("\n") for line in groups]
 
+
+def get_input_day04(f):
+    inputs = get_input_nlnl_records(f)
+    numbers = list(map(int, inputs[0][0].split(",")))
+    cards = inputs[1:]
+    card_results = list()
+    for card in cards:
+        new_card = list()
+        for row in card:
+            new_card.append(list(map(int, row.split())))
+        card_results.append(new_card)
+    return [numbers, card_results]
 
 def binary_search(data, instructions, control):
     """ day05 has a few binary search problems where the
